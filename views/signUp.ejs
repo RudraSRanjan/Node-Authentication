@@ -1,0 +1,33 @@
+<h1>Welcome to Sign up Page</h1>
+
+
+<%if(errorMessage){ %>
+    <div class="alert alert-success" role="alert">
+        <%= errorMessage %>
+
+
+    </div>
+    <%}%>
+
+<form action="/user/signUp" method="post">
+    <div class="mb-3">
+        <lable for="name" class="form-lable">User-Name</lable>
+        <input type="text" class="form-control" id="name" name="userName" required> 
+    </div>
+    <div class="mb-3">
+        <lable for="email" class="form-lable">Email Address</lable>
+        <input type="email" class="form-control" id="email" name="email" required> 
+    </div>
+    <div class="mb-3">
+        <lable for="password" class="form-lable">Password</lable>
+        <input type="password" class="form-control" id="password" name="password" > 
+    </div>
+    <button type="submit" class="btn btn-primary">Sign-Up</button>
+   
+    
+</form>
+
+
+
+<a href="/auth/google" style="font-size: medium;">Sign-in with Google</a>
+<p style="font-size: medium;">Already Have an Account  <a href="/user/signIn" style="font-size: large;">Sign-In</a></p>
