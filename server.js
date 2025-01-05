@@ -30,8 +30,8 @@ server.use(passport.initialize());
 server.use(passport.session());
 
 passport.use(new GoogleStrategy({
-    clientID:"632196906703-5oaeb3i9ogkc5rsha2buipkpqlhiic4f.apps.googleusercontent.com",
-    clientSecret:"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",
+    clientID:process.env.ClientID,
+    clientSecret:process.env.ClientSecret,
     callbackURL:"http://localhost:4100/auth/google/callback",
     scope:["email","profile"]
 },
