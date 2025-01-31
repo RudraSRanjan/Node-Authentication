@@ -74,7 +74,7 @@ const port = process.env.PORT || 4100;
 server.use("/user",userRouter);
 server.use("/auth",authenticateRouter);
 
-server.listen(4100,()=>{
+server.listen(port,()=>{
     console.log("Server is listening on port 4100");
     connectUsingMongoose();
 })
