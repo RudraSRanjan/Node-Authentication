@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 // dotenv.config();
 
-const url= "mongodb://localhost:27017/NodeDB";
+const url= "mongodb+srv://ruddraranjan:passw0rd@node.oxxxh.mongodb.net/?retryWrites=true&w=majority&appName=Node";
 
 export const connectUsingMongoose= async()=>{
 
