@@ -7,9 +7,9 @@ import passport from "passport";
 import {Strategy as GoogleStrategy} from "passport-google-oauth20";
 import authenticateRouter from "./Routes/authentication.routes.js";
 import userRouter from "./Routes/user.routes.js";
-// import dotenv from "dotenv";
+import dotenv from "dotenv";
 
-// dotenv.config();
+dotenv.config();
 
 
 
