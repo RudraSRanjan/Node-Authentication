@@ -47,7 +47,7 @@ function(accessToken,refreshToken,profile,callback){
 
 ));
 
-const port = process.env.PORT || 4100;
+
 //Seriailize the user
 passport.serializeUser((user,done)=>{
     done(null,user);
@@ -70,7 +70,7 @@ server.get("/",(req,res)=>
     res.redirect("/user/signUp");
 })
 
-
+const port = process.env.PORT || 4100;
 server.use("/user",userRouter);
 server.use("/auth",authenticateRouter);
 
