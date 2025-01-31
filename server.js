@@ -29,7 +29,7 @@ server.use(
 server.use(express.json());
 server.use(express.urlencoded({extended:true}));
 
-const port = process.env.PORT || 4100;
+
 
 server.use(passport.initialize());
 server.use(passport.session());
@@ -47,7 +47,7 @@ function(accessToken,refreshToken,profile,callback){
 
 ));
 
-
+const port = process.env.PORT || 4100;
 //Seriailize the user
 passport.serializeUser((user,done)=>{
     done(null,user);
