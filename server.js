@@ -7,9 +7,9 @@ import passport from "passport";
 import {Strategy as GoogleStrategy} from "passport-google-oauth20";
 import authenticateRouter from "./Routes/authentication.routes.js";
 import userRouter from "./Routes/user.routes.js";
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 
-dotenv.config();
+// dotenv.config();
 
 
 
@@ -19,7 +19,7 @@ const server= express();
 //Creating Session
 server.use(
     session({
-        secret:process.env.SecretKey,
+        secret:"Passw0rd",
         resave:false,
         saveUninitialized:true,
         cookie:{secure:false}
@@ -29,12 +29,14 @@ server.use(
 server.use(express.json());
 server.use(express.urlencoded({extended:true}));
 
+const port = process.env.PORT || 4100;
+
 server.use(passport.initialize());
 server.use(passport.session());
 
 passport.use(new GoogleStrategy({
-    clientID:process.env.ClientID,
-    clientSecret:process.env.ClientSecret,
+    clientID:"632196906703-5oaeb3i9ogkc5rsha2buipkpqlhiic4f.apps.googleusercontent.com",
+    clientSecret:"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",
     callbackURL:"http://localhost:4100/auth/google/callback",
     scope:["email","profile"]
 },

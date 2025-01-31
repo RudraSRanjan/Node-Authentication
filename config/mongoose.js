@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 
-dotenv.config();
+// dotenv.config();
 
-const url= process.env.mongoDB;
+const url= "mongodb://localhost:27017/NodeDB";
 
 export const connectUsingMongoose= async()=>{
 

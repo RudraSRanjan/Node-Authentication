@@ -121,14 +121,14 @@ class UserRepository{
             const transporter= nodemailer.createTransport({
                 service: "Gmail",
                 auth:{
-                    user:process.env.user,
-                    pass:process.env.pass
+                    user:"rudraranjan212@gmail.com",
+                    pass:"xxpe zmnv cuyq fdgc"
                 }});
 
             //Email options
             const mailOptions={
-                from:process.env.fromEmail,
-                to:process.env.toEmail,
+                from:"rudraranjan212@gmail.com",
+                to:user.email,
                 subject:"Password Forget Request",
                 text:`Your Password is: ${password}`
             };
