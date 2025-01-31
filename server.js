@@ -33,6 +33,7 @@ server.use(express.urlencoded({extended:true}));
 
 server.use(passport.initialize());
 server.use(passport.session());
+const port = process.env.PORT || 4100;
 
 passport.use(new GoogleStrategy({
     clientID:"632196906703-5oaeb3i9ogkc5rsha2buipkpqlhiic4f.apps.googleusercontent.com",
@@ -70,7 +71,7 @@ server.get("/",(req,res)=>
     res.redirect("/user/signUp");
 })
 
-const port = process.env.PORT || 4100;
+
 server.use("/user",userRouter);
 server.use("/auth",authenticateRouter);
 
