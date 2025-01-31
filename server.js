@@ -33,7 +33,7 @@ server.use(express.urlencoded({extended:true}));
 
 server.use(passport.initialize());
 server.use(passport.session());
-const port = process.env.PORT || 4100;
+const port = 4100 || process.env.PORT  ;
 
 passport.use(new GoogleStrategy({
     clientID:"632196906703-5oaeb3i9ogkc5rsha2buipkpqlhiic4f.apps.googleusercontent.com",
