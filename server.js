@@ -38,7 +38,7 @@ const port = 4100 || process.env.PORT  ;
 passport.use(new GoogleStrategy({
     clientID:"632196906703-5oaeb3i9ogkc5rsha2buipkpqlhiic4f.apps.googleusercontent.com",
     clientSecret:"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",
-    callbackURL:`http://localhost:${Number(port)}/auth/google/callback`,
+    callbackURL:"http://localhost:4100/auth/google/callback",
     scope:["email","profile"]
 },
 
