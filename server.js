@@ -38,7 +38,7 @@ const port =  process.env.PORT || 4100 ;
 passport.use(new GoogleStrategy({
     clientID:"632196906703-5oaeb3i9ogkc5rsha2buipkpqlhiic4f.apps.googleusercontent.com",
     clientSecret:"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",
-    callbackURL:"http://localhost:4100/auth/google/callback",
+    callbackURL:"https://node-authentication-hspu.onrender.com/auth/google/callback",
     scope:["email","profile"]
 },
 
